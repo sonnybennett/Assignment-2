@@ -19,6 +19,13 @@ namespace Assignment_2
 
         private void TabPage3_Click(object sender, EventArgs e)
         {
+
+
+
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
             try
             {
                 //read Length and Height and Width from textboxes
@@ -26,14 +33,18 @@ namespace Assignment_2
                 double Height = double.Parse(textBox2.Text);
                 double Width = double.Parse(textBox3.Text);
                 //read Surface area and Volume from labels
-                double Surfacearea = 2.0 * (Length * Height + Length * Width + Height * Width)
-                double Volume = force * sin(Angle);
+                double Surfacearea = 2.0 * (Length * Height + Length * Width + Height * Width);
+                double Volume = Length * Height * Width;
                 //run the code between these brackets 
-                label1.Text = "Fx = " + Fx;
-                label2.Text = "Fy = " + Fy;
-                double Force = Math.Sqrt(Fx * Fx + Fy * Fy);
-            }
+                label1.Text = "Surface area = " + Surfacearea;
+                label2.Text = "Volume = " + Volume;
 
+            }
+            catch
+            {
+                MessageBox.Show("Error on input");
+
+            }
         }
     }
 }
