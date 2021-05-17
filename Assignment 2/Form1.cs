@@ -46,5 +46,27 @@ namespace Assignment_2
 
             }
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            try
+            {   //read Radius from textboxes
+                double Radius = double.Parse(textBox1.Text);
+                //read Surface area and Volume from labels
+                double Surfacearea = 4.0 * Math.PI() * Radius * Radius;
+                double Volume = 4.0 / 3.0 * Math.PI() * Radius * Radius * Radius ;
+                //run the code between these brackets 
+                label1.Text = "Surface area = " + Surfacearea;
+                label2.Text = "Volume = " + Volume;
+                
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Error on input");
+            }
+        }
     }
 }
