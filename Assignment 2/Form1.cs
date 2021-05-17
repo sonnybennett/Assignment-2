@@ -19,6 +19,20 @@ namespace Assignment_2
 
         private void TabPage3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //read Length and Height and Width from textboxes
+                double Length = double.Parse(textBox1.Text);
+                double Height = double.Parse(textBox2.Text);
+                double Width = double.Parse(textBox3.Text);
+                //read Surface area and Volume from labels
+                double Surfacearea = 2.0 * (Length * Height + Length * Width + Height * Width)
+                double Volume = force * sin(Angle);
+                //run the code between these brackets 
+                label1.Text = "Fx = " + Fx;
+                label2.Text = "Fy = " + Fy;
+                double Force = Math.Sqrt(Fx * Fx + Fy * Fy);
+            }
 
         }
     }
