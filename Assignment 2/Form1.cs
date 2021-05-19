@@ -53,8 +53,8 @@ namespace Assignment_2
             {   //read Radius from textboxes
                 double Radius = double.Parse(textBox1.Text);
                 //read Surface area and Volume from labels
-                double Surfacearea = 4.0 * Math.PI() * Radius * Radius;
-                double Volume = 4.0 / 3.0 * Math.PI() * Radius * Radius * Radius ;
+                double Surfacearea = 4.0 * Math.PI * Radius * Radius;
+                double Volume = 4.0 / 3.0 * Math.PI * Radius * Radius * Radius ;
                 //run the code between these brackets 
                 label1.Text = "Surface area = " + Surfacearea;
                 label2.Text = "Volume = " + Volume;
@@ -67,6 +67,19 @@ namespace Assignment_2
             {
                 MessageBox.Show("Error on input");
             }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            //read Radius and Height  from textboxes
+            double Radius = double.Parse(textBox1.Text);
+            double Height = double.Parse(textBox2.Text);
+            //read Surface area and Volume from labels
+            double Surfacearea = 2.0 * (Length * Height + Length * Width + Height * Width);
+            double Volume = Length * Height * Width;
+            //run the code between these brackets 
+            label1.Text = "Surface area = " + Surfacearea;
+            label2.Text = "Volume = " + Volume;
         }
     }
 }
