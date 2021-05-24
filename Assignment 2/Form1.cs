@@ -51,13 +51,13 @@ namespace Assignment_2
         {
             try
             {   //read Radius from textboxes
-                double Radius = double.Parse(textBox1.Text);
+                double Radius = double.Parse(textBox4.Text);
                 //read Surface area and Volume from labels
                 double Surfacearea = 4.0 * Math.PI * Radius * Radius;
                 double Volume = 4.0 / 3.0 * Math.PI * Radius * Radius * Radius ;
                 //run the code between these brackets 
-                label1.Text = "Surface area = " + Surfacearea;
-                label2.Text = "Volume = " + Volume;
+                label3.Text = "Surface area = " + Surfacearea;
+                label4.Text = "Volume = " + Volume;
                 
 
 
@@ -71,15 +71,22 @@ namespace Assignment_2
 
         private void Button3_Click(object sender, EventArgs e)
         {
-            //read Radius and Height  from textboxes
-            double Radius = double.Parse(textBox1.Text);
-            double Height = double.Parse(textBox2.Text);
-            //read Surface area and Volume from labels
-            double Surfacearea = Math.PI * Radius * (Radius + Math.Sqrt(Height * Height + Radius * Radius));
-            double Volume = 1.0 / 3.0 * Math.PI * Radius * Radius * Height;
-            //run the code between these brackets 
-            label1.Text = "Surface area = " + Surfacearea;
-            label2.Text = "Volume = " + Volume;
+            try
+
+            {  //read Radius and Height  from textboxes
+                double Radius = double.Parse(textBox6.Text);
+                double Height = double.Parse(textBox5.Text);
+                //read Surface area and Volume from labels
+                double Surfacearea = Math.PI * Radius * (Radius + Math.Sqrt(Height * Height + Radius * Radius));
+                double Volume = 1.0 / 3.0 * Math.PI * Radius * Radius * Height;
+                //run the code between these brackets 
+                label5.Text = "Surface area = " + Surfacearea;
+                label6.Text = "Volume = " + Volume;
+            }
+            catch
+            {
+                MessageBox.Show("Error on input");
+            }
         }
     }
 }
