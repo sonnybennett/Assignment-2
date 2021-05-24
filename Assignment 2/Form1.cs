@@ -75,8 +75,8 @@ namespace Assignment_2
             double Radius = double.Parse(textBox1.Text);
             double Height = double.Parse(textBox2.Text);
             //read Surface area and Volume from labels
-            double Surfacearea = 2.0 * (Length * Height + Length * Width + Height * Width);
-            double Volume = Length * Height * Width;
+            double Surfacearea = Math.PI * Radius * (Radius + Math.Sqrt(Height * Height + Radius * Radius));
+            double Volume = 1.0 / 3.0 * Math.PI * Radius * Radius * Height;
             //run the code between these brackets 
             label1.Text = "Surface area = " + Surfacearea;
             label2.Text = "Volume = " + Volume;
